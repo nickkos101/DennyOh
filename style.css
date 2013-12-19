@@ -1,0 +1,312 @@
+/* Main */
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 1170px;
+}
+
+body {
+	background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	color: #394041;
+}
+
+p, ol, ul {
+	color: #8b9293;
+	font-size: 13px;
+	line-height:24px;
+}
+
+input[type=text] {
+	width: 100%;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+textarea {
+	width: 100%;
+	resize:none;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+select {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+button {
+	background-color: #e3712c;
+	font-size:13px;
+	color: #fff;
+	padding: 10px;
+	border:none;
+	border-radius:0px;
+}
+
+.alignLeft {
+	padding-right:10px;
+	padding-bottom:10px;
+	float: left;
+}
+
+.alignRight {
+	float: right;
+	padding-left:10px;
+	padding-bottom:10px;
+}
+
+.alignCenter {
+	text-align: center;
+	clear:both;
+}
+
+/* Header */
+
+header {
+	width:100%;
+	height:90px;
+	background-color: #252A2B;
+	position: relative;
+}
+
+.logo-wrap {
+	position: relative;
+}
+
+.logo {
+	float:left;
+	max-width: 200px;
+	padding-top:30px;
+}
+
+.sub-logo {
+	position: absolute;
+	left:0px;
+	top:120px;
+	display: none;
+}
+
+
+nav {
+	position: relative;
+	float:right;
+	text-align: right;
+	width: 700px;
+	height: 100%;
+}
+
+nav ul {
+	position: absolute;
+	bottom:11px;
+	right: 0px;
+	list-style: none;
+	margin:0px;
+	padding: 0px;
+	color: #8b9293;
+	vertical-align: bottom;
+}
+
+nav ul li {
+	display: inline;
+	padding:15px;
+	font-size: 15px;
+	line-height: auto;
+}
+
+nav ul li:hover {
+	background-color: #fff;
+	color: #252A2B;
+}
+
+/* Slider */
+
+.slider {
+	width: 100%;
+	max-height:666px;
+	overflow: hidden;
+}
+
+.slide {
+	min-width: 100%;
+	min-height: 666px;
+	max-height: 666px;
+}
+
+/* Footer */
+
+footer {
+	float: left;
+	width: 100%;
+	padding-bottom:50px;
+	border-top:1px solid #D1D1D1;
+	font-size:13px;
+}
+
+.copyright-text {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.credit-text {
+	float: left;
+	width: 50%;
+	text-align: right;
+}
+
+/* Homepage */
+
+.mid-area {
+	float: left;
+	width: 100%;
+	margin-bottom:25px;
+	background-color: #fff;
+	border-left:1px solid #dedede;
+	border-right:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+
+.blog-content {
+	float: left;
+	width: 760.5px;
+	padding:30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;     
+}
+
+aside {
+	float:right;
+	width: 409.5px;
+	padding:30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;    
+}
+
+aside ul {
+	list-style: none;
+}
+
+aside ul li {
+	float: left;
+	width: 100%;
+	clear: both;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom:1px dotted #dedede;
+}
+
+aside ul li img {
+	width: 50%;
+	padding-right:10px;
+	float:left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  
+}
+
+aside ul li h4 {
+	width: 50%;
+	margin:0px;
+	float:right;
+	text-align: left;
+	vertical-align: top;
+}
+
+/* Subpage Styles */
+
+.fullwidth-content {
+	float: left;
+	width: 100%;
+	padding:30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;     
+}
+
+.blog-area {
+	float: left;
+	width: 868px;
+	margin-top:25px;
+	margin-bottom:25px;
+	background-color: #fff;
+	border:1px solid #dedede;
+}
+
+.blog-post {
+	float: left;
+	width: 100%;
+	padding:20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;     
+}
+
+.blog-post h2 {
+	font-size: 27px;
+	margin-top:0px;
+	margin-bottom:10px;
+	padding-bottom:10px;
+	line-height: 36px;
+	border-bottom:1px solid #dedede;
+	color: #394041;
+}
+
+.blog-post p {
+	line-height: 27px;
+	font-size: 14px;
+}
+
+.meta-info {
+	color: #394041;
+	font-family: 'Lato', sans-serif;
+}
+
+.featured-image {
+	width: 100%;
+	margin-top:20px;
+	border-top:6px solid #394041;
+}
+
+/* Sidebar */
+
+.sidebar {
+	width:300px; 
+	float: right;
+	padding-top:25px;
+}
+
+.widget {
+	float: left;
+	width: 100%;
+	border:1px solid #dedede;
+}
+
+.widget h3 {
+	background-color: #fff;
+	border-bottom:1px solid #dedede;
+	margin:0px;
+	padding:10px;
+}
+
+.widget-content {
+	padding:10px;
+}
+
+.widget ul, .widget ol {
+	margin:0px;
+	padding:0px;
+}
