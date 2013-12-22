@@ -1,18 +1,28 @@
-<?php include 'header.php'; ?>
+<?php get_header(); ?>
 <div class="slider">
-	<img src="images/slide-three.jpg" class="slide">
+	<img src="<?php echo get_template_directory_uri(); ?>/images/slide-three.jpg" class="slide">
+	<div class="container">
+		<form class="alignCenter">
+			<h3>Search for Properties</h3>
+			<input type="text" placeholder="Enter A Location or MLS #">
+				<input type="submit" value="Search for Properties">
+		</form>
+	</div>
 </div>
 <div class="container">
-	<div class="mid-area">
+	<div class="mid-area home-gradient">
 		<div class="col-wrap">
 			<div class="column">
-				<h3>Column 1</h3>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/property_lease.png">
+				<h3>Listings by Buildings</h3>
 			</div>
 			<div class="column">
-				<h3>Column 2</h3>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/property_rent.png">
+				<h3>Search for listings</h3>
 			</div>
 			<div class="column">
-				<h3>Column 3</h3>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/property_sale.png">
+				<h3>Neighborhood Info</h3>
 			</div>
 		</div>
 		<section class="blog-content">
@@ -28,23 +38,23 @@
 			<aside>
 				<ul>
 					<li>
-						<img src="images/property.jpg">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg">
 						<h4>This is a featured listing.</h4>
 					</li>
 					<li>
-						<img src="images/property.jpg">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg">
 						<h4>This is a featured listing.</h4>
 					</li>
 					<li>
-						<img src="images/property.jpg">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg">
 						<h4>This is a featured listing.</h4>
 					</li>
 					<li>
-						<img src="images/property.jpg">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg">
 						<h4>This is a featured listing.</h4>
 					</li>
 				</ul>
 			</aside>
 		</div>
 	</div>
-	<?php include 'footer.php'; ?>
+	<?php get_footer(); ?>

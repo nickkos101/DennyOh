@@ -1,6 +1,16 @@
+/*
+Theme Name: Idxpress Pro
+Theme URI: http://businessonmarketst.com
+Description: A Modular Theme, provided by BMS Express.
+Author: Nicholas Koskowski
+Version: 1.0
+Tags: multi-color, idx, real estate
+*/
+
 /* Main */
 
 .container {
+	position: relative;
 	margin-right: auto;
 	margin-left: auto;
 	width: 1170px;
@@ -16,37 +26,52 @@ h1, h2, h3, h4, h5, h6 {
 	color: #394041;
 }
 
+a {
+	text-decoration: none;
+	color:#eb6431;
+}
+
 p, ol, ul {
 	color: #8b9293;
 	font-size: 13px;
 	line-height:24px;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 input[type=text] {
 	width: 100%;
 	margin-top:5px;
 	margin-bottom:5px;
+	border:1px solid #cdcdcd;
+	padding:10px;
 }
 
 textarea {
 	width: 100%;
+	min-height: 240px;
 	resize:none;
 	margin-top:5px;
 	margin-bottom:5px;
+	border:1px solid #cdcdcd;
+	padding:10px;
 }
 
 select {
 	margin-top:5px;
 	margin-bottom:5px;
+	border:1px solid #cdcdcd;
+	padding:10px;
 }
 
-button {
+button, input[type=submit] {
 	background-color: #e3712c;
 	font-size:13px;
 	color: #fff;
 	padding: 10px;
 	border:none;
 	border-radius:0px;
+	display: block;
+	clear:both;
 }
 
 .alignLeft {
@@ -64,6 +89,10 @@ button {
 .alignCenter {
 	text-align: center;
 	clear:both;
+}
+
+.colored {
+	color: #4cc8ea;
 }
 
 /* Header */
@@ -108,34 +137,74 @@ nav ul {
 	list-style: none;
 	margin:0px;
 	padding: 0px;
-	color: #8b9293;
 	vertical-align: bottom;
 }
 
 nav ul li {
 	display: inline;
-	padding:15px;
 	font-size: 15px;
 	line-height: auto;
 }
 
-nav ul li:hover {
+nav ul li a {
+	color: #8b9293;
+	text-decoration: none;
+	padding:15px;
+}
+
+nav ul li a:hover {
 	background-color: #fff;
 	color: #252A2B;
+}
+
+.moniker {
+	padding:15px;
+	background-color: #ededed;
+	border-top:2px solid #4cc8ea;
 }
 
 /* Slider */
 
 .slider {
 	width: 100%;
+	height: 666px;
 	max-height:666px;
 	overflow: hidden;
+	position: relative;
 }
 
 .slide {
 	min-width: 100%;
 	min-height: 666px;
 	max-height: 666px;
+	position: absolute;
+}
+
+.slider form {
+	width: 100%;
+	z-index:10000;
+	position: absolute;
+	background-color: #f5f5f5;
+	padding:30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	top:451px;
+	border-left:1px solid #dedede;
+	border-right:1px solid #dedede;
+	border-top:1px solid #dedede;
+}
+
+.slider form h3 {
+	margin-top:0px;
+}
+
+.slider input[type=submit] {
+	margin-top:15px;
+	padding:15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline;
 }
 
 /* Footer */
@@ -172,10 +241,30 @@ footer {
 	border-bottom:1px solid #dedede;
 }
 
+.home-gradient {
+	background: #f5f5f5;
+	background: -moz-linear-gradient(top,  #f5f5f5 0%, #ffffff 23%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(23%,#ffffff));
+	background: -webkit-linear-gradient(top,  #f5f5f5 0%,#ffffff 23%);
+	background: -o-linear-gradient(top,  #f5f5f5 0%,#ffffff 23%);
+	background: -ms-linear-gradient(top,  #f5f5f5 0%,#ffffff 23%);
+	background: linear-gradient(to bottom,  #f5f5f5 0%,#ffffff 23%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=0 );
+}
+
 .column {
 	float: left;
 	width: 33.33%;
 	text-align: center;
+}
+
+.column img {
+	padding-top:35px;
+}
+
+.column h3 {
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .blog-content {
@@ -237,7 +326,7 @@ aside ul li h4 {
 	box-sizing: border-box;     
 }
 
-.blog-area {
+.content-area {
 	float: left;
 	width: 868px;
 	margin-top:25px;
@@ -277,8 +366,158 @@ aside ul li h4 {
 
 .featured-image {
 	width: 100%;
+	height: auto;
 	margin-top:20px;
 	border-top:6px solid #394041;
+}
+
+#myChart {
+	height:680px;
+	position: absolute;
+	z-index:1000;
+}
+
+/* Buildings */
+
+.building-wrap {
+}
+
+.building-content {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  
+	padding-left:45px;
+	padding-right:45px;
+	padding-top:20px;
+	color: #252a2b;
+}
+
+.building h2 button {
+	padding:0px;
+	background-color: transparent;
+	float:right;
+}
+
+/* Contact */
+
+.contact-details ul {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+
+.contact-details ul li {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.contact-details img {
+	margin-right:10px;
+}
+
+/* Neighboorhoods */
+
+.blog-post.neighborhood:first-of-type {
+	padding-top:20px;
+	padding-bottom:0px;
+}
+
+.blog-post.neighborhood {
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+.neighborhood a {
+	color: #fff;
+}
+
+.neighborhood h2 {
+	border:none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.neighborhood h2 a {
+	color:#394041;
+}
+
+.neighborhood hr {
+	display: block;
+	background: none;
+	border: none;
+	padding:0px;
+	padding-top:2px;
+	border-top:3px solid #cfd2d3;
+	border-bottom:1px solid #cfd2d3;
+}
+
+.neighborhood hr.dots {
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top:none;
+	border-bottom:1px dotted #cfd2d3;
+	clear:both;
+}
+
+.neighborhood button {
+	color:#fff;
+	background-color:#4cc8ea;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 130px;
+	height:30px;
+	text-align: center;
+	padding:0px;
+}
+
+.neighborhood-content {
+	max-width:242px; 
+	float: left;
+	font-size: 15px;
+}
+
+.neighborhood .featured-image {
+	float:right;
+	width:390px;
+	height:217px;
+	border:4px solid #7f7f7f;
+}
+
+.map-icon {
+	width:150px;
+	height:225px;
+	float: left;
+}
+
+/* Carousel */
+
+.main-img {
+	width: 100%;
+	max-height: 356px;
+	border:1px solid #999;
+	margin-bottom:20px;
+}
+
+.carousel ul {
+	padding:0px;
+	margin:0px;
+	width: 100%;
+	text-align: center;
+	padding-bottom:10px;
+	border-bottom:1px dotted #999;
+}
+
+.carousel ul li {
+	list-style: none;
+	display: inline;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.carousel ul li img {
+	width:58px;
+	height:58px;
+	border:3px solid #999;
 }
 
 /* Sidebar */
@@ -293,6 +532,12 @@ aside ul li h4 {
 	float: left;
 	width: 100%;
 	border:1px solid #dedede;
+	margin-bottom:20px;
+	color: #394041;
+}
+
+.widget th, .widget td {
+	border:none !important;
 }
 
 .widget h3 {
@@ -309,4 +554,45 @@ aside ul li h4 {
 .widget ul, .widget ol {
 	margin:0px;
 	padding:0px;
+}
+
+/* IDX MODS */
+
+hr {
+	display: none;
+}
+
+table {
+	font-size:13px;
+}
+
+table th {
+	font-weight:bold !important;
+	border-right:1px solid #999;
+	border:1px solid #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;   
+}
+
+table td {
+	font-weight: normal !important;
+	border:1px solid #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;     
+}
+
+table td b, table td span {
+	font-weight: normal !important;
+}
+
+.dsidx-search-widget .dsidx-search-button .submit {
+	padding:10px !important;
+}
+
+.dsidx-header-title {
+	font-family: 'Lato', sans-serif !important;
+	font-size:18px !important;
+	font-weight:bold !important;
 }

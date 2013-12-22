@@ -1,25 +1,24 @@
 <html>
 <head>
 	<title>IdxPro</title>
-		<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/normalize.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script tyep="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom-map.js"></script>
+	<?php wp_head(); ?>
 </head>
 <body>
 	<header>
 		<div class="container">
 			<div class="logo-wrap">
-				<img class="logo" src="images/logo.png">
-				<img src="images/sub-logo.png" class="sub-logo">
+				<a href="<?php echo get_site_url(); ?>">
+					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
+				</a>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/sub-logo.png" class="sub-logo">
 			</div>
 			<nav>
-				<ul>
-					<li>Home</li>
-					<li>Listings</li>
-					<li>News</li>
-					<li>Gallery</li>
-					<li>Pages</li>
-				</ul>
+				<?php wp_nav_menu(array('theme_location' => 'Header_Nav',)); ?>
 			</nav>
 			<div>
 			</header>
