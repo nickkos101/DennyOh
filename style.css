@@ -319,6 +319,10 @@ aside ul li {
 	border-bottom:1px dotted #dedede;
 }
 
+aside ul li:last-of-type {
+border-bottom:none;
+}
+
 aside ul li img {
 	width: 50%;
 max-height:100px;
@@ -368,7 +372,7 @@ aside ul li h4 {
 
 .blog-post h2 {
 	font-size: 27px;
-	margin-top:0px;
+	margin-top:10px;
 	margin-bottom:10px;
 	padding-bottom:10px;
 	line-height: 36px;

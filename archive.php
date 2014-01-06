@@ -9,7 +9,7 @@
 			</div>
 			<?php 
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail(array('class' => " featured-image"));
+				the_post_thumbnail('full', array('class' => " featured-image"));
 			}  
 			?>
 			<?php the_content(); ?>
