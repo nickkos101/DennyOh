@@ -1,0 +1,25 @@
+/* Autocracy Admin CSS */
+
+body {
+	color:#464646;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Rokkitt', serif;
+	color: #7e1619;
+}
+
+label {
+	clear: both;
+	display: block;
+}
+
+input[type=text] {
+	clear: both;
+	display: block;
+}
+
+.module-fullwidth input[type=text] {
+	clear:none;
+	display: inline;
+}

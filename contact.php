@@ -4,6 +4,8 @@ Template Name: Contact Us Page
 */
 ?>
 <?php get_header(); ?>
+<?php $themeoptions = get_option('main_theme_options'); ?>
+<?php $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
 <div class="container">
 	<div class="content-area">
 		<section class="fullwidth-content">
@@ -14,43 +16,32 @@ Template Name: Contact Us Page
 				<ul>
 					<li>
 						<img src="<?php echo get_template_directory_uri(); ?>/images/icon-location.png">
-						3015 Grand Ave, Coconut Grove,
-						Merrick Way, FL 12345
+						Address: <?php echo $themeoptions['address']; ?>
 					</li>
 					<li>
 						<img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone2.png">
-						Phone: 619-729-8424
+						Phone: <?php echo $themeoptions['phone']; ?>
 					</li>
 					<li>
 						<img src="<?php echo get_template_directory_uri(); ?>/images/icon-mobile.png">
-						Mobile: 619-729-8424
+						Mobile: <?php echo $themeoptions['mobile']; ?>
 					</li>
 					<li>
 						<img src="<?php echo get_template_directory_uri(); ?>/images/icon-mail2.png">
-						Email: info@yourwebsite.com
+						Email: <?php echo $themeoptions['email']; ?>
 					</li>
 				</ul>
 			</div>
 			<?php the_content(); ?>
 			<h3 class="moniker">Send us a message</h3>
-			<form>
+			<form action="<?php echo get_template_directory_uri(); ?>/emailprocessor.php" method="post">
+				<input type="hidden" name="currentpageurl" value="<?php echo $actual_link; ?>">
 				<label>Name:</label>
-				<input type="text">
+				<input name="name" type="text">
+				<label>Email:</label>
+				<input name="email" type="text">
 				<label>Message:</label>
-				<textarea></textarea>
-				<label>Department:</label>
-				<select>
-					<option>Sales</option>
-					<option>HR</option>
-					<option>Marketing</option>
-					<option>Technical Support</option>
-				</select>
-				<label>Options 1:</label>
-				<input type="radio">
-				<label>Options 2:</label>
-				<input type="radio">
-				<label>Options 3:</label>
-				<input type="radio">
+				<textarea name="message"></textarea>
 				<input type="submit">
 			</form>
 		<?php endwhile; endif; ?>

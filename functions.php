@@ -1,5 +1,8 @@
 <?php
 
+include 'autocracy/autocracy.php';
+
+
 //Register Areas
 register_nav_menus( 
     array(
