@@ -1,7 +1,13 @@
 $(document).ready(function(){
 	$('.building-wrap h2 button').click(function(){
-		$('.nmap').hide();
-		$('.gmap').show();
+		if($('.gmap').css('display') == 'none') {
+			$('.nmap').hide();
+			$('.gmap').show();
+		}
+		else {
+			$('.gmap').hide();
+			$('.nmap').show();
+		}
 	});
 
 

@@ -2,30 +2,48 @@
 <div class="container">
 	<div class="content-area">
 		<section class="blog-post building">
-			<canvas id="myChart" width="828" height="680" style="position:absolute;"></canvas>
-			<div class="building-wrap">
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="nmap">
+				<canvas id="myChart" width="828" height="680" style="position:absolute;"></canvas>
 				<img src="<?php echo get_template_directory_uri(); ?>/images/map.png" style="" />
+			</div>
+			<div class="gmap">
+				<?php echo get_post_meta(get_the_ID(), 'googlemap', true); ?>
+			</div>
+			<div class="building-wrap">
 				<h2>
 					<?php the_title(); ?>
 					<button><img src="<?php echo get_template_directory_uri(); ?>/images/map-button.png"></button>
 				</h2>
-				<hr/>
+				<div class="facts-area">
+					<h3>FACTS</h3>
+					<?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'factsarea', true)); ?>
+				</div>
 				<div class="carousel">
-					<img class="main-img" src="<?php echo get_template_directory_uri(); ?>/images/property.jpg">
-					<ul>
-						<li><img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg"></li>
-						<li><img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg"></li>
-						<li><img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg"></li>
-						<li><img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg"></li>
-						<li><img src="<?php echo get_template_directory_uri(); ?>/images/property.jpg"></li>
-					</ul>
+					<?php imageGallery('neighborhoodimages'); ?>
 				</div>
 				<div class="building-content">
-					<?php the_title(); ?>
+					<?php the_content(); ?>
 				</div>
+				<div class="buildings">
+					<?php
+					$featuredPosts = new WP_Query();
+					$featuredPosts->query(array('post_type' => 'Buildings', 'posts_per_page' => 5));
+					while ($featuredPosts->have_posts()) : $featuredPosts->the_post();
+					?>
+					<div class="building-list-item">
+						<?php the_post_thumbnail(); ?>
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<?php the_excerpt(); ?>
+					</div>
+				<?php endwhile; ?>
+				<?php wp_reset_query(); ?>
 			</div>
-		</section>
-	</div>
-	<?php get_sidebar(); ?>
+		</div>
+	<?php endwhile; ?>
+<?php endif; ?>
+</section>
+</div>
+<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
