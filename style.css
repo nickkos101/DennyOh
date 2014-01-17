@@ -148,6 +148,7 @@ nav ul li {
 	display: inline;
 	font-size: 15px;
 	line-height: auto;
+	position: relative;
 }
 
 nav ul li a {
@@ -159,6 +160,39 @@ nav ul li a {
 nav ul li a:hover {
 	background-color: #fff;
 	color: #252A2B;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+nav ul li ul {
+	display: none;
+	background-color:#252A2B;
+	position: absolute;
+	top:33px;
+	left:0px;
+	text-align: left;
+	z-index: 9000000000000000;
+	max-width: 200px
+}
+
+nav ul li ul li {
+	display: block;
+	padding:10px;
+	padding-left:0px;
+	background-color:#252A2B;
+	width: 200px;
+	border-bottom:1px solid #474747;
+}
+
+nav ul li ul li:hover {
+	color: #e3712c;
+}
+
+nav ul li ul li a:hover {
+	background-color: transparent;
+	color: #e3712c;
 }
 
 .moniker {
@@ -374,7 +408,7 @@ aside ul li h4 {
 .fullwidth-content {
 	float: left;
 	width: 100%;
-	padding:30px;
+	padding:20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;     
