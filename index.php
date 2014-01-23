@@ -13,15 +13,17 @@
 </div>
 <div class="container">
 	<div class="mid-area home-gradient">
-		<a href="<?php echo $themeoptions['icon1labelnk']; ?>">
-			<img style="float:left;" src="<?php echo get_template_directory_uri(); ?>/images/icon-search.png">
-		</a>
-		<a href="<?php echo $themeoptions['icon2labelnk']; ?>">
-			<img style="float:left;width: 380px;height: 222px;" src="<?php echo get_template_directory_uri(); ?>/images/icon-hands.png">
-		</a>
-		<a href="<?php echo $themeoptions['icon3labelnk']; ?>">
-			<img style="float:left;" src="<?php echo get_template_directory_uri(); ?>/images/icon-play.png">
-		</a>
+		<div class="icons">
+			<a href="<?php echo $themeoptions['icon1labelnk']; ?>">
+				<img onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/images/search-icon-static.png'"  onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/images/search-icon-hover.png'"  src="<?php echo get_template_directory_uri(); ?>/images/search-icon-static.png">
+			</a>
+			<a href="<?php echo $themeoptions['icon2labelnk']; ?>">
+				<img onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/images/handshake-icon-static.png'" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/images/handshake-icon-hover.png'"  src="<?php echo get_template_directory_uri(); ?>/images/handshake-icon-static.png">
+			</a>
+			<a href="<?php echo $themeoptions['icon3labelnk']; ?>">
+				<img onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/images/media-icon-static.png'" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/images/media-icon-hover.png'" src="<?php echo get_template_directory_uri(); ?>/images/media-icon-static.png">
+			</a>
+		</div>
 		<div class="col-wrap">
 			<div class="column">
 				<h3><a href="<?php echo $themeoptions['icon1labelnk']; ?>"><?php echo $themeoptions['icon1label']; ?></a></h3>
@@ -33,21 +35,22 @@
 				<h3><a href="<?php echo $themeoptions['icon3labelnk']; ?>"><?php echo $themeoptions['icon3label']; ?></a></h3>
 			</div>
 		</div>
+		<img alt="seperator" src="<?php echo get_template_directory_uri(); ?>/images/seperator.png">
 		<section class="blog-content">
-			<h2>Latest Blog:</h2>
+			<h2><b>Latest</b> Blog Post:</h2>
+			<hr>
 			<?php 
 			query_posts( 'posts_per_page=1' );
 			if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h3><?php the_title(); ?></h3>
 			<?php the_post_thumbnail('full'); ?>
 			<?php the_excerpt(); ?>
-			<button><a href="<?php the_permalink(); ?>">Read More</a></button>
 		<?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
 </section>
 <aside>
-	<h2>Featured Posts:</h2>
+	<h2><b>Other</b> Blog Posts:</h2>
+	<hr>
 	<ul>
 		<?php
 		$sliderPosts = new WP_Query();
