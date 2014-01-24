@@ -37,6 +37,12 @@ $meta_boxes[] = array(
     // List of meta fields
     'fields' => array(
         array(
+        'name'             => 'Neighborhood Icon',
+        'id'               => "neighborhoodicon",
+        'type'             => 'plupload_image',
+        'max_file_uploads' => 1,
+        ),
+        array(
         'name' => 'Google Maps Link Code',
         'desc' => "",
         'id' => "googlemap",

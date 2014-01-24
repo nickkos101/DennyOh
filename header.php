@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.0.min.js"></script>
 	<script tyep="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom-map.js"></script>
 	<script tyep="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/function.js"></script>
 	<?php wp_head(); ?>
